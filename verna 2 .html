@@ -1,0 +1,1661 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Verna Óptica & Novus División Médica - Monturas de autor, salud visual de vanguardia y equipos oftálmicos de alta gama.">
+    <title>Verna Óptica | Luxury Eyewear & Novus Medical</title>
+
+    <!-- Google Fonts: Playfair Display (Luxury Serif) & Montserrat (Modern Sans-Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;0,700;1,400&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+        /* ==========================================================================
+           1. VARIABLES DE MARCA (PALETA VINTAGE-LUXURY) Y CONFIGURACIÓN BASE
+           ========================================================================== */
+        :root {
+            --color-rose-gold: #c59b8a;
+            --color-rose-gold-dark: #a87e6d;
+            --color-rose-gold-light: #e6cec5;
+            --color-cream: #faf7f2;
+            --color-sand: #f0eae1;
+            --color-charcoal: #1a1a1a;
+            --color-charcoal-light: #2d2d2d;
+            --color-white: #ffffff;
+            --color-border: #e2d7cb;
+            --font-serif: 'Playfair Display', Georgia, serif;
+            --font-sans: 'Montserrat', sans-serif;
+            --shadow-subtle: 0 10px 30px rgba(0, 0, 0, 0.05);
+            --shadow-elevated: 0 15px 35px rgba(197, 155, 138, 0.18);
+            --transition: all 0.35s cubic-bezier(0.25, 1, 0.5, 1);
+        }
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: var(--font-sans);
+            background-color: var(--color-cream);
+            color: var(--color-charcoal);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: var(--transition);
+        }
+
+        img {
+            max-width: 100%;
+            display: block;
+        }
+
+        .container {
+            width: 90%;
+            max-width: 1240px;
+            margin: 0 auto;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 600;
+            border-radius: 2px;
+            cursor: pointer;
+            transition: var(--transition);
+            text-align: center;
+        }
+
+        .btn-primary {
+            background-color: var(--color-charcoal);
+            color: var(--color-cream);
+            border: 1px solid var(--color-charcoal);
+        }
+
+        .btn-primary:hover {
+            background-color: var(--color-rose-gold);
+            border-color: var(--color-rose-gold);
+            color: var(--color-white);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: var(--color-charcoal);
+            border: 1px solid var(--color-charcoal);
+        }
+
+        .btn-outline:hover {
+            background-color: var(--color-charcoal);
+            color: var(--color-cream);
+        }
+
+        .section-header {
+            text-align: center;
+            margin-bottom: 50px;
+        }
+
+        .section-header span {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            color: var(--color-rose-gold-dark);
+            font-weight: 600;
+            display: block;
+            margin-bottom: 10px;
+        }
+
+        .section-header h2 {
+            font-family: var(--font-serif);
+            font-size: 2.4rem;
+            color: var(--color-charcoal);
+        }
+
+        /* ==========================================================================
+           2. HEADER & NAVEGACIÓN
+           ========================================================================== */
+        header {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            z-index: 1000;
+            background-color: rgba(250, 247, 242, 0.96);
+            backdrop-filter: blur(10px);
+            border-bottom: 1px solid var(--color-border);
+            transition: var(--transition);
+        }
+
+        .nav-container {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 80px;
+        }
+
+        .logo {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            letter-spacing: 4px;
+            font-weight: 700;
+            color: var(--color-charcoal);
+            text-transform: uppercase;
+        }
+
+        .logo span {
+            color: var(--color-rose-gold);
+            font-weight: 300;
+            font-size: 1.1rem;
+            letter-spacing: 2px;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 25px;
+            list-style: none;
+            align-items: center;
+        }
+
+        .nav-links a {
+            font-size: 0.82rem;
+            text-transform: uppercase;
+            letter-spacing: 1.5px;
+            font-weight: 500;
+            position: relative;
+        }
+
+        .nav-links a::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0%;
+            height: 2px;
+            background-color: var(--color-rose-gold);
+            transition: var(--transition);
+        }
+
+        .nav-links a:hover::after {
+            width: 100%;
+        }
+
+        .nav-actions {
+            display: flex;
+            align-items: center;
+            gap: 20px;
+        }
+
+        .cart-icon-btn {
+            position: relative;
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--color-charcoal);
+        }
+
+        .cart-badge {
+            position: absolute;
+            top: -8px;
+            right: -8px;
+            background-color: var(--color-rose-gold);
+            color: var(--color-white);
+            font-size: 0.65rem;
+            font-weight: 700;
+            border-radius: 50%;
+            width: 18px;
+            height: 18px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* ==========================================================================
+           3. HERO SECTION
+           ========================================================================== */
+        .hero {
+            height: 100vh;
+            min-height: 650px;
+            background: linear-gradient(rgba(26, 26, 26, 0.45), rgba(26, 26, 26, 0.55)), 
+                        url('https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&w=1920&q=80') center/cover no-repeat;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            color: var(--color-white);
+            padding-top: 80px;
+        }
+
+        .hero-content {
+            max-width: 850px;
+            padding: 0 20px;
+        }
+
+        .hero-content span {
+            font-size: 0.85rem;
+            letter-spacing: 5px;
+            text-transform: uppercase;
+            color: var(--color-rose-gold-light);
+            display: block;
+            margin-bottom: 15px;
+        }
+
+        .hero-content h1 {
+            font-family: var(--font-serif);
+            font-size: 3.5rem;
+            line-height: 1.2;
+            margin-bottom: 20px;
+            font-weight: 400;
+        }
+
+        .hero-content p {
+            font-size: 1.05rem;
+            letter-spacing: 1px;
+            margin-bottom: 35px;
+            color: rgba(255, 255, 255, 0.9);
+            font-weight: 300;
+        }
+
+        .hero-buttons {
+            display: flex;
+            gap: 15px;
+            justify-content: center;
+        }
+
+        .hero-buttons .btn-primary {
+            background-color: var(--color-rose-gold);
+            border-color: var(--color-rose-gold);
+        }
+
+        .hero-buttons .btn-primary:hover {
+            background-color: var(--color-white);
+            color: var(--color-charcoal);
+        }
+
+        .hero-buttons .btn-outline {
+            border-color: var(--color-white);
+            color: var(--color-white);
+        }
+
+        .hero-buttons .btn-outline:hover {
+            background-color: var(--color-white);
+            color: var(--color-charcoal);
+        }
+
+        /* ==========================================================================
+           4. SOBRE NOSOTROS / HISTORIA
+           ========================================================================== */
+        .about-section {
+            padding: 100px 0;
+            background-color: var(--color-white);
+        }
+
+        .about-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 60px;
+            align-items: center;
+        }
+
+        .about-img {
+            position: relative;
+        }
+
+        .about-img img {
+            border-radius: 2px;
+            box-shadow: var(--shadow-subtle);
+        }
+
+        .about-img::before {
+            content: '';
+            position: absolute;
+            top: -15px;
+            left: -15px;
+            width: 100%;
+            height: 100%;
+            border: 2px solid var(--color-rose-gold-light);
+            z-index: 0;
+            border-radius: 2px;
+        }
+
+        .about-img img {
+            position: relative;
+            z-index: 1;
+        }
+
+        .about-text h3 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            margin-bottom: 20px;
+            color: var(--color-charcoal);
+        }
+
+        .about-text p {
+            margin-bottom: 18px;
+            color: #555;
+            font-size: 0.95rem;
+            text-align: justify;
+        }
+
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 15px;
+            margin-top: 30px;
+        }
+
+        .pillar-card {
+            background-color: var(--color-sand);
+            padding: 20px 15px;
+            text-align: center;
+            border-radius: 2px;
+        }
+
+        .pillar-card i {
+            font-size: 1.4rem;
+            color: var(--color-rose-gold-dark);
+            margin-bottom: 8px;
+        }
+
+        .pillar-card h4 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        /* ==========================================================================
+           5. FILTROS Y VITRINA DE PRODUCTOS (CABALLEROS, DAMAS, NOVUS)
+           ========================================================================== */
+        .showcase-section {
+            padding: 100px 0;
+            background-color: var(--color-cream);
+        }
+
+        .category-filters {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 12px;
+            margin-bottom: 45px;
+        }
+
+        .filter-btn {
+            background-color: transparent;
+            border: 1px solid var(--color-border);
+            padding: 10px 24px;
+            font-size: 0.82rem;
+            letter-spacing: 1.5px;
+            text-transform: uppercase;
+            cursor: pointer;
+            font-weight: 500;
+            transition: var(--transition);
+            color: var(--color-charcoal);
+        }
+
+        .filter-btn.active, .filter-btn:hover {
+            background-color: var(--color-rose-gold);
+            color: var(--color-white);
+            border-color: var(--color-rose-gold);
+        }
+
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 30px;
+        }
+
+        .product-card {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            border-radius: 2px;
+            overflow: hidden;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .product-card:hover {
+            box-shadow: var(--shadow-elevated);
+            transform: translateY(-5px);
+            border-color: var(--color-rose-gold-light);
+        }
+
+        .product-badge {
+            position: absolute;
+            top: 12px;
+            left: 12px;
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            font-size: 0.65rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            padding: 4px 8px;
+            border-radius: 2px;
+            z-index: 2;
+        }
+
+        .product-img-box {
+            position: relative;
+            height: 230px;
+            background-color: #fbfbfb;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            overflow: hidden;
+        }
+
+        .product-img-box img {
+            max-height: 100%;
+            object-fit: contain;
+            transition: var(--transition);
+        }
+
+        .product-card:hover .product-img-box img {
+            transform: scale(1.06);
+        }
+
+        .product-info {
+            padding: 22px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            flex-grow: 1;
+            justify-content: space-between;
+        }
+
+        .product-brand {
+            font-size: 0.75rem;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            color: var(--color-rose-gold-dark);
+            margin-bottom: 5px;
+            font-weight: 600;
+        }
+
+        .product-name {
+            font-family: var(--font-serif);
+            font-size: 1.15rem;
+            margin-bottom: 12px;
+            color: var(--color-charcoal);
+        }
+
+        .product-price-box {
+            margin-bottom: 18px;
+        }
+
+        .product-price {
+            font-size: 1.25rem;
+            font-weight: 700;
+            color: var(--color-charcoal);
+        }
+
+        .product-tax {
+            font-size: 0.75rem;
+            color: #777;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            display: block;
+        }
+
+        .product-actions {
+            display: flex;
+            gap: 8px;
+        }
+
+        .product-actions button {
+            flex: 1;
+            padding: 10px;
+            font-size: 0.75rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            font-weight: 600;
+            cursor: pointer;
+            border-radius: 2px;
+            transition: var(--transition);
+        }
+
+        .btn-add-cart {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            border: 1px solid var(--color-charcoal);
+        }
+
+        .btn-add-cart:hover {
+            background-color: var(--color-rose-gold);
+            border-color: var(--color-rose-gold);
+        }
+
+        .btn-consult-wa {
+            background-color: transparent;
+            color: var(--color-charcoal);
+            border: 1px solid var(--color-border);
+        }
+
+        .btn-consult-wa:hover {
+            background-color: #25D366;
+            color: var(--color-white);
+            border-color: #25D366;
+        }
+
+        /* ==========================================================================
+           6. SECCIÓN CATÁLOGO / DESCARGA PDF
+           ========================================================================== */
+        .catalog-banner {
+            background: linear-gradient(135deg, var(--color-charcoal) 0%, var(--color-charcoal-light) 100%);
+            color: var(--color-white);
+            padding: 70px 0;
+            text-align: center;
+            position: relative;
+            border-top: 3px solid var(--color-rose-gold);
+        }
+
+        .catalog-banner h3 {
+            font-family: var(--font-serif);
+            font-size: 2.2rem;
+            margin-bottom: 15px;
+        }
+
+        .catalog-banner p {
+            max-width: 600px;
+            margin: 0 auto 30px auto;
+            color: var(--color-rose-gold-light);
+            font-size: 0.95rem;
+        }
+
+        /* ==========================================================================
+           7. FORMULARIO DE CITAS Y EXAMEN VISUAL
+           ========================================================================== */
+        .appointment-section {
+            padding: 100px 0;
+            background-color: var(--color-white);
+        }
+
+        .appointment-wrapper {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            background-color: var(--color-sand);
+            border-radius: 2px;
+            overflow: hidden;
+            border: 1px solid var(--color-border);
+        }
+
+        .appointment-info {
+            padding: 50px;
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+
+        .appointment-info h3 {
+            font-family: var(--font-serif);
+            font-size: 2rem;
+            margin-bottom: 20px;
+            color: var(--color-rose-gold-light);
+        }
+
+        .appointment-info p {
+            font-size: 0.92rem;
+            margin-bottom: 25px;
+            color: #ccc;
+        }
+
+        .info-list {
+            list-style: none;
+        }
+
+        .info-list li {
+            display: flex;
+            align-items: center;
+            gap: 15px;
+            margin-bottom: 15px;
+            font-size: 0.9rem;
+        }
+
+        .info-list i {
+            color: var(--color-rose-gold);
+            font-size: 1.1rem;
+        }
+
+        .appointment-form {
+            padding: 50px;
+        }
+
+        .form-group {
+            margin-bottom: 18px;
+        }
+
+        .form-group label {
+            display: block;
+            font-size: 0.78rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: var(--color-charcoal);
+        }
+
+        .form-control {
+            width: 100%;
+            padding: 12px 15px;
+            border: 1px solid var(--color-border);
+            background-color: var(--color-white);
+            font-family: var(--font-sans);
+            font-size: 0.9rem;
+            border-radius: 2px;
+            outline: none;
+            transition: var(--transition);
+        }
+
+        .form-control:focus {
+            border-color: var(--color-rose-gold);
+        }
+
+        /* ==========================================================================
+           8. FAQ (PREGUNTAS FRECUENTES)
+           ========================================================================== */
+        .faq-section {
+            padding: 100px 0;
+            background-color: var(--color-cream);
+        }
+
+        .faq-accordion {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .faq-item {
+            background-color: var(--color-white);
+            border: 1px solid var(--color-border);
+            margin-bottom: 15px;
+            border-radius: 2px;
+        }
+
+        .faq-question {
+            padding: 20px;
+            cursor: pointer;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-weight: 600;
+            font-size: 0.95rem;
+            color: var(--color-charcoal);
+            transition: var(--transition);
+        }
+
+        .faq-question:hover {
+            color: var(--color-rose-gold-dark);
+        }
+
+        .faq-answer {
+            max-height: 0;
+            overflow: hidden;
+            transition: max-height 0.4s ease-out;
+            padding: 0 20px;
+            color: #666;
+            font-size: 0.9rem;
+            line-height: 1.6;
+        }
+
+        .faq-item.active .faq-answer {
+            padding-bottom: 20px;
+        }
+
+        .faq-item.active .faq-question i {
+            transform: rotate(180deg);
+            color: var(--color-rose-gold);
+        }
+
+        /* ==========================================================================
+           9. FOOTER & REDES SOCIALES
+           ========================================================================== */
+        footer {
+            background-color: var(--color-charcoal);
+            color: var(--color-white);
+            padding: 80px 0 30px 0;
+            border-top: 4px solid var(--color-rose-gold);
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 60px;
+        }
+
+        .footer-brand h4 {
+            font-family: var(--font-serif);
+            font-size: 1.8rem;
+            letter-spacing: 3px;
+            margin-bottom: 15px;
+        }
+
+        .footer-brand p {
+            color: #999;
+            font-size: 0.9rem;
+            margin-bottom: 20px;
+            max-width: 320px;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .social-links a {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 40px;
+            height: 40px;
+            border: 1px solid rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            color: var(--color-white);
+            font-size: 1rem;
+        }
+
+        .social-links a:hover {
+            background-color: var(--color-rose-gold);
+            border-color: var(--color-rose-gold);
+            transform: translateY(-3px);
+        }
+
+        .footer-col h5 {
+            font-size: 0.85rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: 20px;
+            color: var(--color-rose-gold-light);
+        }
+
+        .footer-col ul {
+            list-style: none;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul a {
+            color: #aaa;
+            font-size: 0.85rem;
+        }
+
+        .footer-col ul a:hover {
+            color: var(--color-rose-gold);
+            padding-left: 5px;
+        }
+
+        .footer-bottom {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+            font-size: 0.8rem;
+            color: #777;
+        }
+
+        /* ==========================================================================
+           10. BOTÓN FLOTANTE DE WHATSAPP
+           ========================================================================== */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background-color: #25D366;
+            color: white;
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 30px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.25);
+            z-index: 9999;
+            transition: var(--transition);
+        }
+
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            color: white;
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.4);
+        }
+
+        /* ==========================================================================
+           11. MODAL DEL CARRITO DE COMPRAS
+           ========================================================================== */
+        .cart-modal {
+            position: fixed;
+            top: 0;
+            right: -420px;
+            width: 100%;
+            max-width: 400px;
+            height: 100vh;
+            background-color: var(--color-white);
+            box-shadow: -5px 0 25px rgba(0,0,0,0.15);
+            z-index: 10000;
+            transition: var(--transition);
+            display: flex;
+            flex-direction: column;
+        }
+
+        .cart-modal.open {
+            right: 0;
+        }
+
+        .cart-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0,0,0,0.5);
+            z-index: 9999;
+            display: none;
+        }
+
+        .cart-overlay.open {
+            display: block;
+        }
+
+        .cart-header {
+            padding: 20px;
+            border-bottom: 1px solid var(--color-border);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .cart-header h3 {
+            font-family: var(--font-serif);
+            font-size: 1.3rem;
+        }
+
+        .cart-close {
+            background: none;
+            border: none;
+            font-size: 1.2rem;
+            cursor: pointer;
+            color: var(--color-charcoal);
+        }
+
+        .cart-items {
+            flex-grow: 1;
+            overflow-y: auto;
+            padding: 20px;
+        }
+
+        .cart-item {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 15px;
+            padding-bottom: 15px;
+            border-bottom: 1px solid var(--color-border);
+            align-items: center;
+        }
+
+        .cart-item-img {
+            width: 60px;
+            height: 60px;
+            object-fit: contain;
+            background: var(--color-sand);
+            padding: 5px;
+            border-radius: 2px;
+        }
+
+        .cart-item-info {
+            flex-grow: 1;
+        }
+
+        .cart-item-info h5 {
+            font-size: 0.85rem;
+            margin-bottom: 4px;
+        }
+
+        .cart-item-info span {
+            font-size: 0.8rem;
+            font-weight: 600;
+            color: var(--color-rose-gold-dark);
+        }
+
+        .cart-remove-btn {
+            background: none;
+            border: none;
+            color: #999;
+            cursor: pointer;
+            transition: var(--transition);
+        }
+
+        .cart-remove-btn:hover {
+            color: #d9534f;
+        }
+
+        .cart-footer {
+            padding: 20px;
+            border-top: 1px solid var(--color-border);
+            background-color: var(--color-cream);
+        }
+
+        .cart-total-box {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 15px;
+            font-weight: 700;
+            font-size: 1.1rem;
+        }
+
+        /* ==========================================================================
+           12. RESPONSIVE DESIGN
+           ========================================================================== */
+        @media (max-width: 992px) {
+            .about-grid, .appointment-wrapper {
+                grid-template-columns: 1fr;
+            }
+            .footer-grid {
+                grid-template-columns: 1fr 1fr;
+            }
+            .hero-content h1 {
+                font-size: 2.5rem;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none; /* En producción móvil puede complementarse con menú hamburguesa */
+            }
+            .footer-grid {
+                grid-template-columns: 1fr;
+            }
+            .pillars-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- OVERLAY & CARRITO FLOTANTE -->
+    <div class="cart-overlay" id="cartOverlay" onclick="toggleCart()"></div>
+    <div class="cart-modal" id="cartModal">
+        <div class="cart-header">
+            <h3>Bolsa de Selección</h3>
+            <button class="cart-close" onclick="toggleCart()"><i class="fas fa-times"></i></button>
+        </div>
+        <div class="cart-items" id="cartItemsContainer">
+            <!-- Renderizado dinámico vía JavaScript -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total-box">
+                <span>Subtotal (+ IVA):</span>
+                <span id="cartSubtotal">$0.00</span>
+            </div>
+            <button class="btn btn-primary" style="width: 100%;" onclick="checkoutWhatsApp()">Finalizar por WhatsApp</button>
+        </div>
+    </div>
+
+    <!-- CABECERA Y MENÚ DE NAVEGACIÓN -->
+    <header>
+        <div class="container nav-container">
+            <a href="#hero" class="logo">Verna <span>| Novus</span></a>
+            <ul class="nav-links">
+                <li><a href="#about">Nosotros</a></li>
+                <li><a href="#showcase" onclick="filterCatalog('caballeros')">Caballeros</a></li>
+                <li><a href="#showcase" onclick="filterCatalog('damas')">Damas</a></li>
+                <li><a href="#showcase" onclick="filterCatalog('novus')">Novus Médico</a></li>
+                <li><a href="#catalog">Catálogo PDF</a></li>
+                <li><a href="#appointment">Citas</a></li>
+                <li><a href="#faq">FAQ</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="cart-icon-btn" onclick="toggleCart()" aria-label="Abrir Carrito">
+                    <i class="fas fa-shopping-bag"></i>
+                    <span class="cart-badge" id="cartBadgeCount">0</span>
+                </button>
+                <a href="#appointment" class="btn btn-primary" style="display: none; padding: 8px 16px; font-size: 0.75rem;">Agendar</a>
+            </div>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="hero">
+        <div class="hero-content">
+            <span>Alta Gama en Salud Visual & Equipamiento</span>
+            <h1>Elegancia, Vanguardia y Precisión Clínica</h1>
+            <p>Descubra nuestras colecciones exclusivas de monturas de autor y la división tecnológica Novus para equipamiento oftalmológico.</p>
+            <div class="hero-buttons">
+                <a href="#showcase" class="btn btn-primary">Explorar Colecciones</a>
+                <a href="#appointment" class="btn btn-outline">Agendar Examen Visual</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- SOBRE NOSOTROS -->
+    <section class="about-section" id="about">
+        <div class="container">
+            <div class="about-grid">
+                <div class="about-img">
+                    <img src="https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=800&q=80" alt="Verna Óptica Boutique Interior">
+                </div>
+                <div class="about-text">
+                    <div class="section-header" style="text-align: left; margin-bottom: 25px;">
+                        <span>Nuestra Esencia</span>
+                        <h2>Verna & Novus</h2>
+                    </div>
+                    <p>Fundada en 2026, <strong>Verna</strong> nació con una visión clara: redefinir la experiencia óptica combinando el arte de las monturas de autor con la atención clínica más rigurosa. Creemos que la salud visual de excelencia no debe ser inaccesible, por lo que fusionamos materiales nobles, diseño de vanguardia y costos directos altamente competitivos.</p>
+                    <p>A través de nuestra división especializada <strong>Novus</strong>, distribuimos tecnología médica y oftálmica de alta precisión a especialistas, clínicas y laboratorios, asegurando los más elevados estándares diagnósticos.</p>
+                    
+                    <div class="pillars-grid">
+                        <div class="pillar-card">
+                            <i class="fas fa-gem"></i>
+                            <h4>Diseño de Autor</h4>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fas fa-eye"></i>
+                            <h4>Salud Visual</h4>
+                        </div>
+                        <div class="pillar-card">
+                            <i class="fas fa-hand-holding-dollar"></i>
+                            <h4>Precio Justo</h4>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- VITRINA DE PRODUCTOS (INTERACTIVA) -->
+    <section class="showcase-section" id="showcase">
+        <div class="container">
+            <div class="section-header">
+                <span>Colecciones Exclusivas</span>
+                <h2>Vitrina de Autor & Equipos Novus</h2>
+            </div>
+
+            <!-- Filtros por Categoría -->
+            <div class="category-filters">
+                <button class="filter-btn active" onclick="filterCatalog('todos')">Todos los Artículos</button>
+                <button class="filter-btn" onclick="filterCatalog('caballeros')">Caballeros (11)</button>
+                <button class="filter-btn" onclick="filterCatalog('damas')">Damas (10)</button>
+                <button class="filter-btn" onclick="filterCatalog('novus')">División Novus Médica</button>
+            </div>
+
+            <!-- Grid de Productos -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Los elementos se renderizan dinámicamente desde el array 'productsDB' -->
+            </div>
+        </div>
+    </section>
+
+    <!-- CATÁLOGO INTERACTIVO / DESCARGA PDF -->
+    <section class="catalog-banner" id="catalog">
+        <div class="container">
+            <h3>Catálogo Oficial 2026</h3>
+            <p>Descargue nuestro catálogo digital interactivo en alta resolución con las especificaciones técnicas completas de monturas y equipos médicos Novus.</p>
+            <a href="#catalog" class="btn btn-primary" onclick="alert('Descargando Catálogo Oficial Verna & Novus 2026 (PDF)...'); return false;">
+                <i class="fas fa-file-pdf" style="margin-right: 8px;"></i> Descargar Catálogo PDF
+            </a>
+        </div>
+    </section>
+
+    <!-- FORMULARIO DE CITAS Y EXAMEN VISUAL -->
+    <section class="appointment-section" id="appointment">
+        <div class="container">
+            <div class="appointment-wrapper">
+                <div class="appointment-info">
+                    <h3>Examen Visual Integral</h3>
+                    <p>Agende su consulta con nuestros especialistas para una evaluación refractiva computarizada y adaptación personalizada de cristales.</p>
+                    <ul class="info-list">
+                        <li><i class="fas fa-check-circle"></i> Optometría clínica avanzada</li>
+                        <li><i class="fas fa-check-circle"></i> Asesoría de imagen y visagismo</li>
+                        <li><i class="fas fa-check-circle"></i> Entrega y calibración de monturas</li>
+                    </ul>
+                </div>
+                <div class="appointment-form">
+                    <form id="bookingForm" onsubmit="handleAppointment(event)">
+                        <div class="form-group">
+                            <label for="clientName">Nombre Completo</label>
+                            <input type="text" id="clientName" class="form-control" placeholder="Ej. Carlos Mendoza" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientPhone">Teléfono / WhatsApp</label>
+                            <input type="tel" id="clientPhone" class="form-control" placeholder="Ej. 0414 1234567" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="appointmentDate">Fecha Estimada</label>
+                            <input type="date" id="appointmentDate" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="serviceType">Tipo de Consulta</label>
+                            <select id="serviceType" class="form-control">
+                                <option value="Examen de la Vista / Graduación">Examen de la Vista y Graduación</option>
+                                <option value="Adaptación de Cristales Progresivos">Adaptación de Cristales Progresivos</option>
+                                <option value="Demostración Equipos Médicos Novus">Demostración Equipos Médicos Novus</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">Confirmar Solicitud</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PREGUNTAS FRECUENTES (FAQ) -->
+    <section class="faq-section" id="faq">
+        <div class="container">
+            <div class="section-header">
+                <span>Respuestas Claras</span>
+                <h2>Preguntas Frecuentes</h2>
+            </div>
+            <div class="faq-accordion">
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Qué métodos de pago aceptan?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Aceptamos transferencias bancarias nacionales, transferencias electrónicas, depósitos en divisas, métodos digitales internacionales y pagos en punto de venta directamente en sede.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Cómo funciona la graduación y montaje de cristales?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Puede agendar una cita para examen visual en nuestras instalaciones o enviarnos su fórmula médica emitida por su oftalmólogo. Trabajamos con cristales monofocales, bifocales, progresivos digitales, tratamientos antirreflejo y filtros Blue UV.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Realizan envíos a nivel nacional?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Sí, enviamos de forma asegurada a todo el país mediante empresas de encomienda reconocidas (MRW, Tealca, Zoom). Todos los paquetes viajan con protección y embalaje de alta seguridad.
+                    </div>
+                </div>
+                <div class="faq-item">
+                    <div class="faq-question" onclick="toggleFaq(this)">
+                        ¿Qué garantía tienen los equipos médicos de Novus?
+                        <i class="fas fa-chevron-down"></i>
+                    </div>
+                    <div class="faq-answer">
+                        Todos los equipos de diagnóstico oftálmico distribuidos bajo la división Novus cuentan con garantía oficial directa del fabricante, soporte técnico y disponibilidad de repuestos.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PIE DE PÁGINA (FOOTER) -->
+    <footer>
+        <div class="container">
+            <div class="footer-grid">
+                <div class="footer-brand">
+                    <h4>Verna <span>| Novus</span></h4>
+                    <p>La combinación perfecta entre estética de autor, salud visual y vanguardia médica. Creados para brindar excelencia y distinción.</p>
+                    <div class="social-links">
+                        <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="https://tiktok.com" target="_blank" aria-label="TikTok"><i class="fab fa-tiktok"></i></a>
+                    </div>
+                </div>
+                <div class="footer-col">
+                    <h5>Colecciones</h5>
+                    <ul>
+                        <li><a href="#showcase" onclick="filterCatalog('caballeros')">Línea Caballeros</a></li>
+                        <li><a href="#showcase" onclick="filterCatalog('damas')">Línea Damas</a></li>
+                        <li><a href="#showcase" onclick="filterCatalog('novus')">División Novus</a></li>
+                        <li><a href="#catalog">Catálogo PDF</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Servicios</h5>
+                    <ul>
+                        <li><a href="#appointment">Examen Visual</a></li>
+                        <li><a href="#appointment">Cristales Digitales</a></li>
+                        <li><a href="#faq">Garantías y Envíos</a></li>
+                    </ul>
+                </div>
+                <div class="footer-col">
+                    <h5>Contacto Directo</h5>
+                    <ul>
+                        <li><a href="https://wa.me/584245920684" target="_blank">+58 424 5920684</a></li>
+                        <li><a href="mailto:info@vernaoptica.com">info@vernaoptica.com</a></li>
+                        <li><span style="color: #aaa; font-size: 0.85rem;">Atención Especializada</span></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2026 Verna Óptica & Novus División Médica. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- BOTÓN FLOTANTE DE WHATSAPP -->
+    <a href="https://wa.me/584245920684?text=Hola%2C%20me%20gustar%C3%ADa%20solicitar%20asesor%C3%ADa%20en%20Verna%20%C3%93ptica%20y%20Novus." 
+       class="whatsapp-float" 
+       target="_blank" 
+       aria-label="Contactar a un asesor por WhatsApp">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+
+    <!-- ==========================================================================
+       13. JAVASCRIPT: LÓGICA DE NEGOCIO, AUTOGESTIÓN DE PRODUCTOS Y CARRITO
+       ========================================================================== -->
+    <script>
+        /* ==========================================================================
+           BASE DE DATOS EDITABLE (AUTOGESTIÓN RÁPIDA DE PRODUCTOS)
+           ========================================================================== */
+        const WHATSAPP_PHONE = "584245920684";
+
+        const productsDB = [
+            // --- COLECCIÓN CABALLEROS (11 MODELOS) ---
+            {
+                id: "cab-01",
+                brand: "Martorelli",
+                name: "Montura Principal de Autor (Titanium Rose)",
+                category: "caballeros",
+                price: 45.00,
+                isSignature: true,
+                image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-02",
+                brand: "Martorelli",
+                name: "Square Black Matte",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-03",
+                brand: "Martorelli",
+                name: "Aviator Vintage Steel",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-04",
+                brand: "Martorelli",
+                name: "Classic Tortoise Clubmaster",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-05",
+                brand: "Martorelli",
+                name: "Minimalist Gunmetal Oval",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-06",
+                brand: "Martorelli",
+                name: "Executive Acetate Shadow",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1591076482161-42ce6da69f67?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-07",
+                brand: "Martorelli",
+                name: "Urban Geometric Bronze",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1572635196237-14b3f281503f?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-08",
+                brand: "Martorelli",
+                name: "Deep Blue Horizon",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1508296695146-257a814070b4?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-09",
+                brand: "Martorelli",
+                name: "Carbon Fiber Hybrid",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1511499767150-a48a237f0083?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-10",
+                brand: "Martorelli",
+                name: "Nordic Amber Round",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1473496169904-658ba7c44d8a?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "cab-11",
+                brand: "Martorelli",
+                name: "Sleek Titanium Rectangular",
+                category: "caballeros",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1577803645773-f96470509666?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // --- COLECCIÓN DAMAS (10 MODELOS) ---
+            {
+                id: "dam-01",
+                brand: "Martorelli",
+                name: "Cat-Eye Rose Gold Signature",
+                category: "damas",
+                price: 45.00,
+                isSignature: true,
+                image: "https://images.unsplash.com/photo-1509695503492-49339e38e55e?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-02",
+                brand: "Martorelli",
+                name: "Oversized Soft Nude",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1582142839970-2b93cbacbe68?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-03",
+                brand: "Martorelli",
+                name: "Hexagonal Gold Chic",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-04",
+                brand: "Martorelli",
+                name: "Crystal Clear Acetate",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1509695503492-49339e38e55e?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-05",
+                brand: "Martorelli",
+                name: "Burgundy Velvet Accent",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1582142839970-2b93cbacbe68?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-06",
+                brand: "Martorelli",
+                name: "Milano Butterfly Gold",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-07",
+                brand: "Martorelli",
+                name: "Petite Pearl Rimless",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1509695503492-49339e38e55e?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-08",
+                brand: "Martorelli",
+                name: "Vintage Honey Round",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1582142839970-2b93cbacbe68?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-09",
+                brand: "Martorelli",
+                name: "Emerald Fine Metal",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1574258495973-f010dfbb5371?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "dam-10",
+                brand: "Martorelli",
+                name: "Champaña Luxe Geometric",
+                category: "damas",
+                price: 45.00,
+                image: "https://images.unsplash.com/photo-1509695503492-49339e38e55e?auto=format&fit=crop&w=600&q=80"
+            },
+
+            // --- DIVISIÓN NOVUS (EQUIPOS OFTALMOLÓGICOS Y MÉDICOS) ---
+            {
+                id: "nov-01",
+                brand: "Novus Medical",
+                name: "Autorrefractómetro / Queratómetro Digital",
+                category: "novus",
+                price: 2450.00,
+                isMedical: true,
+                image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "nov-02",
+                brand: "Novus Medical",
+                name: "Lámpara de Hendidura LED Alta Resolución",
+                category: "novus",
+                price: 1850.00,
+                isMedical: true,
+                image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "nov-03",
+                brand: "Novus Medical",
+                name: "Foróptero Manual de Precisión Clínica",
+                category: "novus",
+                price: 1100.00,
+                isMedical: true,
+                image: "https://images.unsplash.com/photo-1584515979956-d9f6e5d09982?auto=format&fit=crop&w=600&q=80"
+            },
+            {
+                id: "nov-04",
+                brand: "Novus Medical",
+                name: "Lensómetro Digital Automático con UV",
+                category: "novus",
+                price: 890.00,
+                isMedical: true,
+                image: "https://images.unsplash.com/photo-1579684385127-1ef15d508118?auto=format&fit=crop&w=600&q=80"
+            }
+        ];
+
+        let cart = [];
+
+        /* RENDERIZAR PRODUCTOS EN EL DOM */
+        function renderProducts(items) {
+            const grid = document.getElementById("productsGrid");
+            grid.innerHTML = "";
+
+            items.forEach(product => {
+                const card = document.createElement("div");
+                card.className = "product-card";
+
+                const badgeHtml = product.isSignature 
+                    ? `<span class="product-badge" style="background-color: var(--color-rose-gold);">Autor Principal</span>` 
+                    : (product.isMedical ? `<span class="product-badge" style="background-color: #2b5876;">Clínico</span>` : "");
+
+                card.innerHTML = `
+                    <div class="product-img-box">
+                        ${badgeHtml}
+                        <img src="${product.image}" alt="${product.name}" loading="lazy">
+                    </div>
+                    <div class="product-info">
+                        <div>
+                            <div class="product-brand">${product.brand}</div>
+                            <h4 class="product-name">${product.name}</h4>
+                        </div>
+                        <div class="product-price-box">
+                            <span class="product-price">$${product.price.toFixed(2)}</span>
+                            <span class="product-tax">+ IVA</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="btn-add-cart" onclick="addToCart('${product.id}')">
+                                <i class="fas fa-bag-shopping"></i> Añadir
+                            </button>
+                            <button class="btn-consult-wa" onclick="consultSingleProduct('${product.id}')" title="Consultar por WhatsApp">
+                                <i class="fab fa-whatsapp"></i>
+                            </button>
+                        </div>
+                    </div>
+                `;
+                grid.appendChild(card);
+            });
+        }
+
+        /* FILTRADO DE CATEGORÍAS */
+        function filterCatalog(category) {
+            const buttons = document.querySelectorAll(".filter-btn");
+            buttons.forEach(btn => btn.classList.remove("active"));
+
+            // Marcar botón activo
+            event && event.target && event.target.classList.add("active");
+
+            if (category === "todos") {
+                renderProducts(productsDB);
+            } else {
+                const filtered = productsDB.filter(p => p.category === category);
+                renderProducts(filtered);
+            }
+        }
+
+        /* GESTIÓN DEL CARRITO INTERACTIVO */
+        function addToCart(productId) {
+            const product = productsDB.find(p => p.id === productId);
+            if (product) {
+                cart.push(product);
+                updateCartUI();
+                toggleCart(true);
+            }
+        }
+
+        function removeFromCart(index) {
+            cart.splice(index, 1);
+            updateCartUI();
+        }
+
+        function updateCartUI() {
+            document.getElementById("cartBadgeCount").innerText = cart.length;
+            const container = document.getElementById("cartItemsContainer");
+            container.innerHTML = "";
+
+            if (cart.length === 0) {
+                container.innerHTML = `<p style="text-align: center; color: #888; margin-top: 40px;">Tu bolsa está vacía.</p>`;
+                document.getElementById("cartSubtotal").innerText = "$0.00";
+                return;
+            }
+
+            let subtotal = 0;
+            cart.forEach((item, index) => {
+                subtotal += item.price;
+                const itemElem = document.createElement("div");
+                itemElem.className = "cart-item";
+                itemElem.innerHTML = `
+                    <img src="${item.image}" alt="${item.name}" class="cart-item-img">
+                    <div class="cart-item-info">
+                        <h5>${item.name}</h5>
+                        <span>$${item.price.toFixed(2)} + IVA</span>
+                    </div>
+                    <button class="cart-remove-btn" onclick="removeFromCart(${index})">
+                        <i class="fas fa-trash"></i>
+                    </button>
+                `;
+                container.appendChild(itemElem);
+            });
+
+            document.getElementById("cartSubtotal").innerText = `$${subtotal.toFixed(2)}`;
+        }
+
+        function toggleCart(forceOpen = false) {
+            const modal = document.getElementById("cartModal");
+            const overlay = document.getElementById("cartOverlay");
+
+            if (forceOpen || !modal.classList.contains("open")) {
+                modal.classList.add("open");
+                overlay.classList.add("open");
+            } else {
+                modal.classList.remove("open");
+                overlay.classList.remove("open");
+            }
+        }
+
+        /* INTEGRACIÓN WHATSAPP */
+        function consultSingleProduct(productId) {
+            const product = productsDB.find(p => p.id === productId);
+            if (!product) return;
+            const message = `Hola Verna & Novus, deseo consultar disponibilidad del modelo: *${product.name}* (${product.brand}) con precio $${product.price.toFixed(2)} + IVA.`;
+            window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`, "_blank");
+        }
+
+        function checkoutWhatsApp() {
+            if (cart.length === 0) {
+                alert("Por favor añade al menos un producto a tu bolsa.");
+                return;
+            }
+
+            let itemsList = cart.map(item => `- ${item.name} ($${item.price.toFixed(2)})`).join("\n");
+            let subtotal = cart.reduce((acc, curr) => acc + curr.price, 0);
+
+            const message = `Hola Verna & Novus, me gustaría procesar la cotización de los siguientes artículos:\n\n${itemsList}\n\n*Subtotal estimado:* $${subtotal.toFixed(2)} (+ IVA).\n¿Podrían indicarme los pasos para concretar mi orden y disponibilidad?`;
+
+            window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`, "_blank");
+        }
+
+        /* GESTIÓN DE CITAS */
+        function handleAppointment(e) {
+            e.preventDefault();
+            const name = document.getElementById("clientName").value;
+            const phone = document.getElementById("clientPhone").value;
+            const date = document.getElementById("appointmentDate").value;
+            const service = document.getElementById("serviceType").value;
+
+            const message = `Hola Verna Óptica, deseo solicitar una cita con los siguientes datos:\n- *Paciente:* ${name}\n- *Teléfono:* ${phone}\n- *Fecha tentativa:* ${date}\n- *Servicio:* ${service}`;
+            window.open(`https://wa.me/${WHATSAPP_PHONE}?text=${encodeURIComponent(message)}`, "_blank");
+        }
+
+        /* ACORDEÓN FAQ */
+        function toggleFaq(element) {
+            const item = element.parentElement;
+            const answer = item.querySelector(".faq-answer");
+            const isOpen = item.classList.contains("active");
+
+            document.querySelectorAll(".faq-item").forEach(i => {
+                i.classList.remove("active");
+                i.querySelector(".faq-answer").style.maxHeight = null;
+            });
+
+            if (!isOpen) {
+                item.classList.add("active");
+                answer.style.maxHeight = answer.scrollHeight + "px";
+            }
+        }
+
+        // Carga inicial
+        document.addEventListener("DOMContentLoaded", () => {
+            renderProducts(productsDB);
+        });
+    </script>
+</body>
+</html>
