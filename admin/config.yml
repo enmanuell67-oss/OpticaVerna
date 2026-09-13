@@ -1,0 +1,17 @@
+backend:
+  name: git-gateway
+  branch: main
+
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+collections:
+  - name: "productos"
+    label: "Monturas y Productos"
+    folder: "content/productos"
+    create: true
+    fields:
+      - {label: "Nombre del Producto", name: "title", widget: "string"}
+      - {label: "Precio ($)", name: "price", widget: "number"}
+      - {label: "Foto", name: "image", widget: "image"}
+      - {label: "Categoría", name: "category", widget: "select", options: ["caballeros", "damas", "novus"]}
